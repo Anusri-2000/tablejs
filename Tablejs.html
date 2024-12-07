@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+    <script>
+        var Id = ["1", "2", "3", "4"];
+        var users = ["anu", "reethu", "pavani", "Teja"];
+        var Email = ["anusrij@gmail.com", "reethu@gmail.com", "pavani@gmail.com", "Teja@gmail.com"];
+        var PhoneNumber = ["6302553215", "72436475885", "5356227223", "43562672778"];
+
+        var text = document.getElementById('text');
+        var table = '<table><thead><tr><th>ID</th><th>Name</th><th>EmailId</th><th>PhoneNumber</th></tr></thead><tbody>';
+
+        for (var i = 0; i < users.length; i++) {
+            table += `<tr><td>${Id[i]}</td><td>${users[i]}</td><td>${Email[i]}</td><td>${PhoneNumber[i]}</td></tr>`;
+        }
+
+        table += '</tbody></table>';
+        text.innerHTML = table; 
+    </script>
+</body>
+</html>
